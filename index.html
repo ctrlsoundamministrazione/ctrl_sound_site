@@ -1,21 +1,24 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CTRL SOUND</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <main id="site">
-    <!-- Header / Logo -->
-    <header id="hero">
-      <img id="logo" src="https://res.cloudinary.com/dzvpg0h7y/image/upload/v1761379499/logodefinitivo_cfdyhm.jpg" alt="Logo CTRL SOUND">
-    </header>
+  <!-- INTRO ANIMATA -->
+  <div id="intro-overlay">
+    <canvas id="smoke-bg"></canvas>
+    <img src="https://res.cloudinary.com/dzvpg0h7y/image/upload/v1761459855/taglio_zwx4li.png" id="intro-logo" alt="CTRL Intro Logo">
+  </div>
+
+ <!-- LOGO PRINCIPALE -->
+  <header id="logo-section">
+    <img src="https://res.cloudinary.com/dzvpg0h7y/image/upload/v1761379499/logodefinitivo_cfdyhm.jpg" alt="CTRL Logo" />
+  </header>
 
     <!-- Video loop -->
     <section id="hero-video" aria-hidden="true">
@@ -156,12 +159,19 @@
       </div>
     </section>
 
-    <!-- Footer contatti -->
-    <footer id="contacts">
-      <p class="contact-line">Email booking: <a href="mailto:projectctrl0@gmail.com">projectctrl0@gmail.com</a></p>
-      <p class="powered">powered by @emanuele.meneghetti </p>
-    </footer>
-  </main>
+    <!-- CONTATTI -->
+  <section id="contacts">
+    <a href="https://on.soundcloud.com/3oS3ANGBhSYSToPGa2" target="_blank" class="btn small">I NOSTRI SET</a>
+    <a href="https://www.instagram.com/ctrlsound_?igsh=djhvaGh3cW1oZGp3" target="_blank" class="btn small">INSTAGRAM</a>
+    <a href="mailto:projectctrl0@gmail.com" class="btn small">CONTATTACI</a>
+  </section>
+
+  <!-- MANIFESTO -->
+  <section id="manifesto">
+    <hr>
+    <p>CTRL è un suono che cresce, una visione che prende forma.</p>
+    <p class="powered">Powered by @emanuele.meneghetti </p>
+  </section>
 
   <script src="script.js"></script>
 </body>
