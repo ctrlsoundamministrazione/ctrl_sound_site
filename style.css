@@ -34,17 +34,22 @@ main{
   align-items:center;
   padding:10px 0 6px;
 }
+
 #logo{
-  width:33%;
-  max-width:240px;
+  width:180px; /* larghezza fissa più adatta */
+  max-width:80%; /* non eccede mai il 80% del container */
   height:auto;
   display:block;
 }
 
 /* Video */
-#hero-video{margin: 12px 0 18px; display:flex; justify-content:center;}
+#hero-video{
+  margin: 12px 0 18px;
+  display:flex;
+  justify-content:center;
+}
 #loopVideo{
-  width:80%;
+  width:90%; /* video al 90% della larghezza dello schermo */
   max-width:960px;
   aspect-ratio:16/9;
   object-fit:contain;
@@ -174,6 +179,14 @@ footer{
   color:var(--muted);
   text-transform:lowercase
 }
+
+/* small screens adjustments */
+@media(min-width:600px){
+  #logo{width:180px;}
+  .scroll-gallery img{width:22%;flex:0 0 22%;}
+  #loopVideo{width:90%;} /* mantiene il video al 90% anche su schermi grandi */
+}
+
 
 /* small screens adjustments */
 @media(min-width:600px){
