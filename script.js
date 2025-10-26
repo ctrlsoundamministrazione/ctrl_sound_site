@@ -21,6 +21,8 @@ for (let i = 0; i < 60; i++) {
 
 function drawSmoke() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  // Gradiente di sfondo
   const gradient = ctx.createRadialGradient(
     canvas.width / 2,
     canvas.height / 2,
@@ -34,6 +36,7 @@ function drawSmoke() {
   ctx.fillStyle = gradient;
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
+  // Particelle di fumo
   ctx.fillStyle = "rgba(120,120,120,0.08)";
   particles.forEach((p) => {
     ctx.beginPath();
@@ -54,12 +57,15 @@ function drawSmoke() {
 
 drawSmoke();
 
-// Nasconde l'intro dopo 4s (solo al primo caricamento)
+// Gestione preloader
+const introOverlay = document.getElementById("intro-overlay");
+
 if (!sessionStorage.getItem("introPlayed")) {
   sessionStorage.setItem("introPlayed", "true");
   setTimeout(() => {
-    document.getElementById("intro-overlay").style.display = "none";
-  }, 5000);
+    introOverlay.style.display = "none";
+  }, 5000); // scompare dopo 5 secondi
 } else {
-  document.getElementById("intro-overlay").style.display = "none";
+  introOverlay.style.display = "none";
 }
+
